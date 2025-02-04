@@ -2,74 +2,82 @@ body {
     padding: 0;
     margin: 0 auto;
     width: 80%;
-}
+    background-color: #1e1e2f;
+    font-family: Arial, sans-serif;
+    color: #e0e0e0;
 
+}
 
 #content {
     font-size: 18px;
     font-weight: bold;
     text-align: center;
-    color: #333;
     margin-top: 20px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: #2a2a3c;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     margin-bottom: 40px;
 }
 
-#btn {
+#btn, #change, #delete-btn {
     display: block;
-    margin: 0 auto;
+    margin: 40px auto;
     padding: 12px 24px;
-    background-color: #3498db;
+    background-color: #3f51b5;
     color: white;
     font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.5s;
+    transition: 0.3s;
 }
 
-#btn:hover {
-    background-color: #2980b9;
+#btn:hover, #change:hover, #delete-btn:hover {
+    background-color: #303f9f;
 }
 
 #span {
     display: block;
     text-align: center;
     font-size: 14px;
-    color: #040404;
+    color: #b0bec5;
     margin-top: 10px;
 }
 
-#change {
-    display: block;
-    margin: 0 auto;
-    padding: 12px 24px;
-    background-color: #22637a;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 30px;
-    transition: background-color 0.5s;
-}
-
-#change:hover {
-    background-color: #2980b9;
-}
-
 #timer {
-    margin: 0 auto;
+    margin: 30px auto;
     width: 100px;
     height: 100px;
-    border-radius: 4px;
-    background-color: #22637a;
+    border-radius: 10px;
+    background-color: #3f51b5;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+    width: 320px;
+    background: #2a2a3c;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 0 auto;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 24px;
+    color: #e0e0e0;
+}
+
+.card-content {
+    font-size: 16px;
+    margin: 12px 0;
+    color: #b0bec5;
 }

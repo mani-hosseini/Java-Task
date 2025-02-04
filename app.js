@@ -52,7 +52,7 @@
 // sortArray(numberArray);
 
 
-// // Task 6
+// // Task 5
 // function counterObj(obj) {
 //     let count = 0;
 //
@@ -82,20 +82,45 @@
 
 
 // // Task 6
-// const changeBtn = document.getElementById("change");
+//  const changeBtn = document.getElementById("change");
 //
-// changeBtn.addEventListener("click", () => {
-//     document.body.style.backgroundColor = "black";
-// });
+//  changeBtn.addEventListener("click", () => {
+//      document.body.style.backgroundColor = "white";
+//  });
 
-// Task 7
-const timerEl = document.getElementById('timer');
-let timer = 3;
-timerEl.innerText = timer;
-let intervalId = setInterval(() => {
-    timer--;
-    if (timer === 0) {
-        clearInterval(intervalId);
-    }
-    timerEl.innerText = timer;
-}, 1000);
+
+// // Task 7
+// const timerEl = document.getElementById('timer');
+// let timer = 3;
+// timerEl.innerText = timer;
+// let intervalId = setInterval(() => {
+//     timer--;
+//     if (timer === 0) {
+//         clearInterval(intervalId);
+//     }
+//     timerEl.innerText = timer;
+// }, 1000);
+
+
+// Task 8
+function creatEl(el) {
+    const bodyEl = document.body;
+    const div = document.createElement("div");
+    div.classList.add("card");
+    const tittle = document.createElement("h2");
+    tittle.classList.add("card-tittle");
+    tittle.innerText = "tittle of this cart";
+    const content = document.createElement("p");
+    content.classList.add("card-content");
+    content.innerText = "content of this cart";
+    const button = document.createElement("button");
+    button.setAttribute("id", "delete-btn");
+    button.innerText = "button of this cart";
+
+    bodyEl.appendChild(div);
+    div.appendChild(tittle);
+    div.appendChild(content);
+    div.appendChild(button);
+}
+
+creatEl();
