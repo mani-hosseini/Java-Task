@@ -81,9 +81,21 @@
 // console.log(counterObj(userObject));
 
 
-// Task 6
-const changeBtn = document.getElementById("change");
+// // Task 6
+// const changeBtn = document.getElementById("change");
+//
+// changeBtn.addEventListener("click", () => {
+//     document.body.style.backgroundColor = "black";
+// });
 
-changeBtn.addEventListener("click", () => {
-    document.body.style.backgroundColor = "black";
-});
+// Task 7
+const timerEl = document.getElementById('timer');
+let timer = 3;
+timerEl.innerText = timer;
+let intervalId = setInterval(() => {
+    timer--;
+    if (timer === 0) {
+        clearInterval(intervalId);
+    }
+    timerEl.innerText = timer;
+}, 1000);

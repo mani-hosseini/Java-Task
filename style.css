@@ -53,9 +53,23 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 30px;
     transition: background-color 0.5s;
 }
 
 #change:hover {
     background-color: #2980b9;
+}
+
+#timer {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #22637a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
 }
