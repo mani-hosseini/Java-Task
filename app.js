@@ -42,11 +42,40 @@
 //
 // document.getElementById('btn').addEventListener('click', getDate);
 
-// Task 4
-function sortArray(array) {
-    array.sort((num1, num2) => num1 - num2);
-    console.log(array);
+// // Task 4
+// function sortArray(array) {
+//     array.sort((num1, num2) => num1 - num2);
+//     console.log(array);
+// }
+//
+// const numberArray = [40, 100, 1, 5, 25, 10];
+// sortArray(numberArray);
+
+
+// Task 6
+function counterObj(obj) {
+    let count = 0;
+
+    for (let key in obj) {
+        if (typeof obj[key] === 'object') {
+            count += counterObj(obj[key]);
+        } else {
+            count++;
+        }
+    }
+
+    return count;
 }
 
-const numberArray = [40, 100, 1, 5, 25, 10];
-sortArray(numberArray);
+const userObject = {
+    name: 'mani',
+    family: 'Mani',
+    email: 'mani@gmail.com',
+    phone: {
+        telephone: '0123456789',
+        phoneNumber: '0123456789'
+    },
+    address: 'iran'
+};
+
+console.log(counterObj(userObject));
