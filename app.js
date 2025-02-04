@@ -103,24 +103,44 @@
 
 
 // Task 8
-function creatEl(el) {
-    const bodyEl = document.body;
-    const div = document.createElement("div");
-    div.classList.add("card");
-    const tittle = document.createElement("h2");
-    tittle.classList.add("card-tittle");
-    tittle.innerText = "tittle of this cart";
-    const content = document.createElement("p");
-    content.classList.add("card-content");
-    content.innerText = "content of this cart";
-    const button = document.createElement("button");
-    button.setAttribute("id", "delete-btn");
-    button.innerText = "button of this cart";
+// function creatEl(el) {
+//     const bodyEl = document.body;
+//     const div = document.createElement("div");
+//     div.classList.add("card");
+//     const tittle = document.createElement("h2");
+//     tittle.classList.add("card-tittle");
+//     tittle.innerText = "tittle of this cart";
+//     const content = document.createElement("p");
+//     content.classList.add("card-content");
+//     content.innerText = "content of this cart";
+//     const button = document.createElement("button");
+//     button.setAttribute("id", "delete-btn");
+//     button.innerText = "button of this cart";
+//
+//     bodyEl.appendChild(div);
+//     div.appendChild(tittle);
+//     div.appendChild(content);
+//     div.appendChild(button);
+// }
+//
+// creatEl();
 
-    bodyEl.appendChild(div);
-    div.appendChild(tittle);
-    div.appendChild(content);
-    div.appendChild(button);
+
+// Task 9
+function isValidEmail(email) {
+    const adStr = email.split('@');
+    if (adStr.length !== 2) {
+        return false;
+    }
+    const localPart = adStr[0];
+    const domainPart = adStr[1];
+    if (localPart.length === 0 || domainPart.length === 0) return false;
+    const dotStr = domainPart.split('.');
+    if (dotStr.length < 2) {
+        return false;
+    }
+    return true;
 }
 
-creatEl();
+console.log(isValidEmail("mani@gmail.com"));
+
