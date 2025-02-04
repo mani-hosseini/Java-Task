@@ -22,22 +22,31 @@
 // console.log(cleanArray(array));
 
 
-// Task 3
-async function getDate() {
-    const span = document.getElementById('span');
-    try {
-        span.innerText = "loading....";
-        const url = 'https://api.chucknorris.io/jokes/random';
-        const api = await fetch(url, {
-            method: 'GET',
-        });
+// // Task 3
+// async function getDate() {
+//     const span = document.getElementById('span');
+//     try {
+//         span.innerText = "loading....";
+//         const url = 'https://api.chucknorris.io/jokes/random';
+//         const api = await fetch(url, {
+//             method: 'GET',
+//         });
+//
+//         const data = await api.json();
+//         span.innerText = data.value;
+//
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
+//
+// document.getElementById('btn').addEventListener('click', getDate);
 
-        const data = await api.json();
-        span.innerText = data.value;
-
-    } catch (error) {
-        console.error(error);
-    }
+// Task 4
+function sortArray(array) {
+    array.sort((num1, num2) => num1 - num2);
+    console.log(array);
 }
 
-document.getElementById('btn').addEventListener('click', getDate);
+const numberArray = [40, 100, 1, 5, 25, 10];
+sortArray(numberArray);
