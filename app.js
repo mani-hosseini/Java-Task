@@ -126,21 +126,31 @@
 // creatEl();
 
 
-// Task 9
-function isValidEmail(email) {
-    const adStr = email.split('@');
-    if (adStr.length !== 2) {
-        return false;
-    }
-    const localPart = adStr[0];
-    const domainPart = adStr[1];
-    if (localPart.length === 0 || domainPart.length === 0) return false;
-    const dotStr = domainPart.split('.');
-    if (dotStr.length < 2) {
-        return false;
-    }
-    return true;
-}
+// // Task 9
+// function isValidEmail(email) {
+//     const adStr = email.split('@');
+//     if (adStr.length !== 2) {
+//         return false;
+//     }
+//     const localPart = adStr[0];
+//     const domainPart = adStr[1];
+//     if (localPart.length === 0 || domainPart.length === 0) return false;
+//     const dotStr = domainPart.split('.');
+//     if (dotStr.length < 2) {
+//         return false;
+//     }
+//     return true;
+// }
+//
+// console.log(isValidEmail("mani@gmail.com"));
 
-console.log(isValidEmail("mani@gmail.com"));
 
+// // Task 10
+// function transformFunc(arr) {
+//     return arr.map(str => ({length: str.length, name: str}));
+// }
+//
+// const strings = ["mani", "kasra"];
+// const result = transformFunc(strings);
+//
+// console.log(result);
