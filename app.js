@@ -52,30 +52,38 @@
 // sortArray(numberArray);
 
 
+// // Task 6
+// function counterObj(obj) {
+//     let count = 0;
+//
+//     for (let key in obj) {
+//         if (typeof obj[key] === 'object') {
+//             count += counterObj(obj[key]);
+//         } else {
+//             count++;
+//         }
+//     }
+//
+//     return count;
+// }
+//
+// const userObject = {
+//     name: 'mani',
+//     family: 'Mani',
+//     email: 'mani@gmail.com',
+//     phone: {
+//         telephone: '0123456789',
+//         phoneNumber: '0123456789'
+//     },
+//     address: 'iran'
+// };
+//
+// console.log(counterObj(userObject));
+
+
 // Task 6
-function counterObj(obj) {
-    let count = 0;
+const changeBtn = document.getElementById("change");
 
-    for (let key in obj) {
-        if (typeof obj[key] === 'object') {
-            count += counterObj(obj[key]);
-        } else {
-            count++;
-        }
-    }
-
-    return count;
-}
-
-const userObject = {
-    name: 'mani',
-    family: 'Mani',
-    email: 'mani@gmail.com',
-    phone: {
-        telephone: '0123456789',
-        phoneNumber: '0123456789'
-    },
-    address: 'iran'
-};
-
-console.log(counterObj(userObject));
+changeBtn.addEventListener("click", () => {
+    document.body.style.backgroundColor = "black";
+});
