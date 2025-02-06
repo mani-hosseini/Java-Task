@@ -154,3 +154,16 @@
 // const result = transformFunc(strings);
 //
 // console.log(result);
+
+// Task 11
+function countfunc(arr) {
+    let reapit = {};
+    arr.forEach(item => {
+        reapit[item] = (reapit[item] || 0) + 1;
+    });
+    return reapit;
+}
+
+const input = ['a', 'b', 'a', 'c', 'b', 'a'];
+console.log(countfunc(input));
+
