@@ -155,15 +155,49 @@
 //
 // console.log(result);
 
-// Task 11
-function countfunc(arr) {
-    let reapit = {};
-    arr.forEach(item => {
-        reapit[item] = (reapit[item] || 0) + 1;
-    });
-    return reapit;
+// // Task 11
+// function countfunc(arr) {
+//     let reapit = {};
+//     arr.forEach(item => {
+//         reapit[item] = (reapit[item] || 0) + 1;
+//     });
+//     return reapit;
+// }
+//
+// const input = ['a', 'b', 'a', 'c', 'b', 'a'];
+// console.log(countfunc(input));
+
+
+// Task 12
+async function getUsers() {
+    const container = document.getElementById("user-container");
+    try {
+        container.innerHTML = "Loading...";
+        const url = "https://jsonplaceholder.typicode.com/users";
+        const api = await fetch(url, {
+            method: "GET",
+        });
+
+        const users = await api.json();
+        container.innerHTML = "";
+
+        users.forEach(user => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            card.innerHTML = `
+                <h2 class="card-title">${user.name}</h2>
+                <p class="card-content">${user.email}</p>
+            `;
+
+            container.appendChild(card);
+        });
+
+    } catch (error) {
+        console.error(error);
+        container.innerText = "Failed to load users.";
+    }
 }
 
-const input = ['a', 'b', 'a', 'c', 'b', 'a'];
-console.log(countfunc(input));
+document.getElementById("api-users").addEventListener("click", getUsers);
 

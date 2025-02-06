@@ -5,7 +5,6 @@ body {
     background-color: #1e1e2f;
     font-family: Arial, sans-serif;
     color: #e0e0e0;
-
 }
 
 #content {
@@ -20,7 +19,7 @@ body {
     margin-bottom: 40px;
 }
 
-#btn, #change, #delete-btn {
+#btn, #change, #delete-btn, #api-users {
     display: block;
     margin: 40px auto;
     padding: 12px 24px;
@@ -33,7 +32,7 @@ body {
     transition: 0.3s;
 }
 
-#btn:hover, #change:hover, #delete-btn:hover {
+#btn:hover, #change:hover, #delete-btn:hover, #api-users:hover {
     background-color: #303f9f;
 }
 
@@ -60,19 +59,26 @@ body {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
+#user-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
 .card {
-    width: 320px;
+    width: 300px;
     background: #2a2a3c;
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     text-align: center;
-    margin: 0 auto;
 }
 
 .card-title {
     margin: 0;
-    font-size: 24px;
+    font-size: 22px;
     color: #e0e0e0;
 }
 
@@ -81,3 +87,5 @@ body {
     margin: 12px 0;
     color: #b0bec5;
 }
+
+
